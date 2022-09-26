@@ -1,0 +1,149 @@
+body {
+    background: #E5E5E5;
+    padding: 40px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.encriptador {
+    margin: 80px 80px 0 160px;
+    width: 50%;
+    height: 100%;
+}
+.encriptador textarea {
+    display: block;
+    background: none;
+    border: none;
+    resize: none;
+
+    font-size: 32px;
+    color: #0A3871;
+
+    width: 100%;
+    height: 12em;
+    margin-bottom: 100px;
+}
+.encriptador textarea:focus {
+    outline: 0;
+}
+.encriptador .botoes {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+.encriptador button {
+    font-size: 20px;
+    width: 50%;
+    padding: 15px 0;
+
+    border: 1px solid #0A3871;
+    border-radius: 20px;
+    background: #E5E5E5;
+    color: #0A3871;
+}
+.encriptador button:hover {
+    cursor: pointer;
+}
+.encriptador .btn-criptografar {
+    border: none;
+    background: #0A3871;
+    color: #E5E5E5;
+}
+
+.resultado {
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+
+    width: 35%; 
+    position: relative;
+}
+.sem-resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
+}
+.com-resultado {
+    font-family: sans-serif;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.ativo .sem-resultado {
+    opacity: 0;
+    visibility: hidden;
+}
+.ativo .com-resultado {
+    opacity: 1;
+    visibility: visible;
+}
+.ativo .com-resultado textarea {
+    width: 100%;
+    height: 50%;
+    border: none;
+    resize: none;
+    background: none;
+
+    font-size: 26px;
+    color: #495057;
+}
+.ativo .com-resultado .copiar {
+    font-size: 20px;
+    width: 50%;
+    padding: 15px 0;
+
+    border: 1px solid #0A3871;
+    border-radius: 20px;
+    background: white;
+    color: #0A3871;
+}
+.ativo .com-resultado .copiar:hover {
+    cursor: pointer;
+}
+.ativo .com-resultado .copiar:active {
+    background: #E5E5E5;
+}
+.ativo .resultado {
+    justify-content: start;
+    align-items: baseline;
+
+    padding: 30px 20px;
+}
+
+.resultado img {
+    width: 60%;
+}
+.resultado .texto {
+    width: 60%;
+    padding: 0 15px;
+
+    text-align: center;
+}
+.resultado .nenhuma-msg {
+    font-weight: bold;
+    font-size: 24px;
+
+    margin-bottom: 16px;
+}
